@@ -9,6 +9,14 @@ password :dummy
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.25.
 
+## Spring boot server
+
+import it in your IDE as maven project, and then run as java project.
+or you can run it by command line :
+using ./mvnw in the folder of spring boot 
+then cd target
+then java -jar "the jar file generated --snapshot.01." or something like that
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
