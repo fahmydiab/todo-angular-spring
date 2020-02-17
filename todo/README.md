@@ -1,5 +1,12 @@
 # Todo
 
+## JWT Authentication 
+username: fahmy
+password :123
+
+username: in28minutes
+password :dummy
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.25.
 
 ## Development server

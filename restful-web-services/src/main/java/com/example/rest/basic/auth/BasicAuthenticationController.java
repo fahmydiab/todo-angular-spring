@@ -1,4 +1,4 @@
-package com.example.rest.webservice.restfulwebservices.basic;
+package com.example.rest.basic.auth;
 
 import org.springframework.web.bind.annotation.*;
 
