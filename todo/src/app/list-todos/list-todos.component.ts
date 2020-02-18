@@ -1,6 +1,7 @@
 import { TododtaService } from './../service/data/tododta.service';
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import { AUTH_USER } from '../service/basic-auth.service';
 
 export class Todo {
   constructor(
@@ -33,14 +34,16 @@ export class ListTodosComponent implements OnInit {
     this.newMethod();
   }
   private newMethod() {
-    this.todoService.retrieveAllTodods('user').subscribe(res => {
+    this.todoService.retrieveAllTodods(sessionStorage.getItem(AUTH_USER)
+).subscribe(res => {
       console.log(res);
       this.todos = res;
     });
   }
 
   deleteTodo(id) {
-    this.todoService.deleteTodo('user', id).subscribe(
+    this.todoService.deleteTodo(sessionStorage.getItem(AUTH_USER)
+, id).subscribe(
       response => {
         console.log(response);
         this.message = `Delete of Todo ${id} Successful`;
@@ -54,6 +57,7 @@ export class ListTodosComponent implements OnInit {
     this.router.navigate(['todos', id]);
   }
   addTodo() {
+    console.log(sessionStorage.getItem(AUTH_USER));
     this.router.navigate(['todos', -1]);
   }
 }

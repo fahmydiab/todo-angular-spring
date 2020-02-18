@@ -16,7 +16,7 @@ executeJWTAuthenticationService(username, password) {
 
 
     return this.http.post<any>(
-      `${API_URL}/authenticate`,{
+      `${API_URL}/authenticate`, {
         username,
         password
       }).pipe(

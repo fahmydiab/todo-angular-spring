@@ -36,7 +36,7 @@ public class TodoHardcodedService {
 	  }
 	  return todo;
   }
-  public Todo deleteById(long id){
+  public Todo deleteById(Long id){
     Todo todo = findById(id);
 
     if (todo == null) return null;
@@ -47,7 +47,7 @@ public class TodoHardcodedService {
     return null;
   }
   
-  public Todo findById(long id) {
+  public Todo findById(Long id) {
 
     for(Todo todo : todos){
       if(todo.getId() == id) {
